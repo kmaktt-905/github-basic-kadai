@@ -1,0 +1,53 @@
+PS C:\Users\jmtt0> mkdir git_challenge
+
+
+    ディレクトリ: C:\Users\jmtt0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/09/19     15:30                git_challenge
+
+
+PS C:\Users\jmtt0> cd git_challenge
+PS C:\Users\jmtt0\git_challenge> git init
+Initialized empty Git repository in C:/Users/jmtt0/git_challenge/.git/
+PS C:\Users\jmtt0\git_challenge> touch hello_world.txt
+touch : 用語 'touch' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの
+名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパ
+スが正しいことを確認してから、再試行してください。
+発生場所 行:1 文字:1
++ touch hello_world.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\jmtt0\git_challenge> typenul > hello_world.txt
+typenul : 用語 'typenul' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラ
+ムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はそ
+のパスが正しいことを確認してから、再試行してください。
+発生場所 行:1 文字:1
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2024/09/19     15:58              0 hello_world.txt
+
+
+PS C:\Users\jmtt0\git_challenge> "Hello, world!" | Out-File hello_world.txt -Encoding Default
+PS C:\Users\jmtt0\git_challenge> git add hello_world.txt
+PS C:\Users\jmtt0\git_challenge> git commit -m "最初のコミット"
+[main (root-commit) d7c9dda] 最初のコミット
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\Users\jmtt0\git_challenge> "こんにちは、世界！" | Out-File hello_world.txt -Encoding Default
+PS C:\Users\jmtt0\git_challenge> git add hello_world.txt
+PS C:\Users\jmtt0\git_challenge> git commit -m "二回目のコミット"
+[main d0c29b2] 二回目のコミット
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\jmtt0\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\jmtt0\git_challenge> git log --oneline
+d0c29b2 (HEAD -> main) 二回目のコミット
+d7c9dda 最初のコミット
+PS C:\Users\jmtt0\git_challenge>
